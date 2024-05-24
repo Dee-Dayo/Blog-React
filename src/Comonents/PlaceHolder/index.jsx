@@ -1,9 +1,9 @@
 import style from "./index.module.css";
 
-const PlaceHolder = ({text}) =>{
+const PlaceHolder = ({text, name}) =>{
     return(
         <div>
-            <input className={style.holder} placeholder={text}/>
+            <input type="text" className={style.holder} placeholder={text} name ={name}/>
         </div>
     )
 }
