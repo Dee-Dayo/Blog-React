@@ -9,12 +9,19 @@ import {Field, Form, Formik} from "formik";
 import {Icon} from "@iconify/react";
 import loadingLoop from "@iconify/icons-line-md/loading-loop";
 import 'react-toastify/dist/ReactToastify.css';
+import PasswordField from "../../Comonents/PasswordField";
+import eyeOffIcon from "@iconify/icons-mdi/eye-off";
+import eyeIcon from "@iconify/icons-mdi/eye";
 
 const SignUp = () => {
    const [isLoading, setIsLoading] = useState(false);
+   const [showPassword, setShowPassword] = useState(false)
 
+   const toggleShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
 
-    const validationSchema = Yup.object().shape({
+   const validationSchema = Yup.object().shape({
         firstName: Yup.string()
             .matches(/^[a-zA-Z\s]+$/, 'Name should only contain letters and spaces')
             .required('First Name is required'),
@@ -27,7 +34,7 @@ const SignUp = () => {
         password: Yup.string()
             .length(4, 'Password must be exactly 4 character long')
             .required('Password is required'),
-    });
+   });
 
     const handleSubscribe = async (values, {resetForm}) => {
 
@@ -139,7 +146,7 @@ const SignUp = () => {
                         <div>
                             <Field
                                 className={style.holder}
-                                type="password"
+                                type={showPassword ? "text" : "password"}
                                 name="password"
                                 placeholder="Enter password"
                                 value={values.password}
@@ -147,6 +154,9 @@ const SignUp = () => {
                                 onBlur={handleBlur}
                                 style={{borderColor: errors.password && touched.password ? 'darkred' : 'inherit',}}
                             />
+                            <button type="button" onClick={toggleShowPassword} className={style.toggleButton}>
+                                <Icon width={24} height={24} icon={showPassword ? eyeOffIcon : eyeIcon}/>
+                            </button>
                             {errors.password && touched.password &&
                                 <div className={style.error}>{errors.password}</div>}
                         </div>
@@ -164,6 +174,11 @@ const SignUp = () => {
                             />
                             {errors.address && touched.address &&
                                 <div className={style.error}>{errors.address}</div>}
+                        </div>
+
+                        <div className={style.aboveButton}>
+                            <p>Already have an account?</p>
+                            <p><a href="/login">Login</a></p>
                         </div>
 
                         <div className={style.button}>
