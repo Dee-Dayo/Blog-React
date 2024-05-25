@@ -6,8 +6,7 @@ const Login = () => {
         <>
             <PageTemplate image={image} headerName={"Welcome Back!"}
                           message={"Log in to your DashBoard"} buttonMessage={"Login"}
-                          holder1={"Email:"} holder2={"Password:"}/>
-
+                          holder1={"Phone Number:"} holder2={"Password:"}/>
         </>
     )
 }

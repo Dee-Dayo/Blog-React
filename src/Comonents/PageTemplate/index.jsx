@@ -1,34 +1,13 @@
 import style from "./index.module.css";
-import FilledButton from "../FilledButton";
-import PlaceHolder from "../PlaceHolder";
 
-const PageTemplate = ({image, headerName, message, buttonMessage, holder1, holder2, holder3, holder4}) =>{
-
-    const submitButton = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const data = {
-            holder1: formData.get('holder1'),
-            holder2: formData.get('holder2'),
-            holder3: formData.get('holder3'),
-            holder4: formData.get('holder4')
-        };
-        console.log(data);
-    }
-
+const PageTemplate = ({image, title, description, children}) =>{
     return (
         <div className={style.container}>
-            <img src={image} alt = "page image"/>
+            <img src={image} alt= "page picture" className={style.image}/>
             <div className={style.heroText}>
-                <h3>{headerName}</h3>
-                <p>{message}</p>
-                <form onSubmit={submitButton} className={style.formStyle}>
-                    {holder1 && <PlaceHolder name="holder1" text={holder1} />}
-                    {holder2 && <PlaceHolder name="holder2" text={holder2} />}
-                    {holder3 && <PlaceHolder name="holder3" text={holder3} />}
-                    {holder4 && <PlaceHolder name="holder4" text={holder4} />}
-                    <FilledButton text={buttonMessage}/>
-                </form>
+                <h3>{title}</h3>
+                <p>{description}</p>
+                {children}
             </div>
         </div>
     )
