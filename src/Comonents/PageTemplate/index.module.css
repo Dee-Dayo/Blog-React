@@ -11,9 +11,9 @@
 .container p{
     margin-bottom: 30px;
 }
-.container img{
-    height: 680px;
-}
+/*.container img{*/
+/*    height: 680px;*/
+/*}*/
 .image{
     width: 50%;
 }
@@ -32,6 +32,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .btn{
     background: #55229e;
@@ -52,7 +54,7 @@
 .toggleButton {
     position: absolute;
     right: 10%;
-    top: 54%;
+    top: 64%;
     background: none;
     border: none;
     cursor: pointer;
@@ -63,4 +65,17 @@
     display: flex;
     justify-content: space-evenly;
     color: #cbcbcb;
+}
+.loginAboveButton{
+    display: flex;
+    justify-content: space-evenly;
+}
+.remember{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.remember img{
+    width: 5px;
 }

@@ -9,7 +9,6 @@ import {Field, Form, Formik} from "formik";
 import {Icon} from "@iconify/react";
 import loadingLoop from "@iconify/icons-line-md/loading-loop";
 import 'react-toastify/dist/ReactToastify.css';
-import PasswordField from "../../Comonents/PasswordField";
 import eyeOffIcon from "@iconify/icons-mdi/eye-off";
 import eyeIcon from "@iconify/icons-mdi/eye";
 
@@ -48,7 +47,7 @@ const SignUp = () => {
                 address: values.address,
             };
             const response = await axios.post("http://localhost:8080/api/DeeLogistics/register-user", payload);
-            if (response.data.successful) {
+            if (response.data.success) {
                 toast.success(`Hi ${values.firstName}, Welcome to Dee's Logistics`, {
                     position: "top-right",
                     autoClose: 5000,
@@ -60,7 +59,7 @@ const SignUp = () => {
                     })
                 resetForm();
             } else {
-                toast.error(response.data.message || 'Registration failed. Please try again', {
+                toast.error('Registration failed. Please try again', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -71,8 +70,8 @@ const SignUp = () => {
                     })
             }
         } catch (error) {
-            console.error('Error during subscription:', error);
-            toast.error('Subscription failed. Please try again', {
+            const errorMessage = error.response.data.logisticsSystemResponse
+            toast.error(errorMessage, {
                 position: 'top-right',
                 autoClose: 5000,
                 hideProgressBar: false,
