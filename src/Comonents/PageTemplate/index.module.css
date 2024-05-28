@@ -36,12 +36,12 @@
     margin-bottom: 20px;
 }
 .btn{
-    background: #55229e;
+    background: #aaff00;
     width: 60%;
     padding: 10px 10px;
     cursor: pointer;
-    color: white;
-    font-size: medium;
+    color: #1a2e35;
+    font-size: large;
     border: none;
     border-radius: 5px;
     font-family: "Comic Sans MS";
@@ -54,7 +54,7 @@
 .toggleButton {
     position: absolute;
     right: 10%;
-    top: 64%;
+    top: 45%;
     background: none;
     border: none;
     cursor: pointer;
@@ -64,7 +64,7 @@
 .aboveButton{
     display: flex;
     justify-content: space-evenly;
-    color: #cbcbcb;
+    color: #1a2e35;
 }
 .loginAboveButton{
     display: flex;

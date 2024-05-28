@@ -11,10 +11,12 @@ import loadingLoop from "@iconify/icons-line-md/loading-loop";
 import 'react-toastify/dist/ReactToastify.css';
 import eyeOffIcon from "@iconify/icons-mdi/eye-off";
 import eyeIcon from "@iconify/icons-mdi/eye";
+import {useNavigate} from "react-router-dom";
 
 const SignUp = () => {
-   const [isLoading, setIsLoading] = useState(false);
-   const [showPassword, setShowPassword] = useState(false)
+    const [isLoading, setIsLoading] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
    const toggleShowPassword = () => {
         setShowPassword(!showPassword);
@@ -31,7 +33,6 @@ const SignUp = () => {
             .matches(/^[0-9]{11}$/, 'Phone number must be 11 digits')
             .required('Phone number is required'),
         password: Yup.string()
-            .length(4, 'Password must be exactly 4 character long')
             .required('Password is required'),
    });
 
@@ -58,6 +59,9 @@ const SignUp = () => {
                     progress: undefined,
                     })
                 resetForm();
+                setTimeout(() =>{
+                    navigate("/login");
+                }, 3000);
             } else {
                 toast.error('Registration failed. Please try again', {
                     position: "top-right",
@@ -177,7 +181,7 @@ const SignUp = () => {
 
                         <div className={style.aboveButton}>
                             <p>Already have an account?</p>
-                            <p><a href="/login">Login</a></p>
+                            <p><a href="/login" style={{color: "#1a2e35"}}>Login</a></p>
                         </div>
 
                         <div className={style.button}>

@@ -20,7 +20,6 @@ const Login = () => {
             .matches(/^[0-9]{11}$/, 'Phone number must be 11 digits')
             .required('Phone number is required'),
         password: Yup.string()
-            .length(4, 'Password must be exactly 4 characters long')
             .required('Password is required')
     });
 
