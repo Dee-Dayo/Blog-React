@@ -1,8 +1,18 @@
-import Header from "../../Comonents/Header";
+import Hero from "./Hero";
+import TrackDelivery from "./TrackDelivery";
+import CostOfDelivery from "./CostOfDelivery";
+import HandlingTransportation from "./HandlingTransportation";
+import Guarantee from "./Guarantee";
 
 const Home = () => {
     return (
-        <Header/>
+        <div>
+            <Hero/>
+            <TrackDelivery/>
+            <CostOfDelivery/>
+            <HandlingTransportation/>
+            <Guarantee/>
+        </div>
     )
 }
 

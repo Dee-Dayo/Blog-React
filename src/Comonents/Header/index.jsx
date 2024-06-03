@@ -1,6 +1,7 @@
 import style from "./index.module.css";
 import logo from "../../assets/deeLogo.png";
 import React from "react";
+import FilledButton from "../FilledButton";
 
 const Header = () => {
     return (
@@ -10,16 +11,14 @@ const Header = () => {
             </div>
 
             <div className={style.midSection}>
-                <p>Home</p>
+                <p><a href="/home" style={{textDecoration: "none", color: "#4d4d4d"}}> Home</a></p>
                 <p>About Us</p>
-                {/*<a href="service.html" target="_parent" className="nav-link">*/}
-                    <p>Our Service</p>
-                {/*</a>*/}
+                <p><a href="/service" style={{textDecoration: "none", color: "#4d4d4d"}}>Our Service</a></p>
             </div>
 
             <div className={style.btn}>
                 <p className={style.loginBtn}><a href="/login">Login</a></p>
-                <p className={style.signupBtn}><a href="/signup">Sign Up</a></p>
+                <FilledButton name={"Sign Up"}/>
             </div>
         </div>
     )

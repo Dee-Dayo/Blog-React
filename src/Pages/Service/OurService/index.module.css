@@ -1,0 +1,19 @@
+.transportation{
+    background: #e4edf9;
+    padding: 20px 20%;
+    justify-content: center;
+    align-items: center;
+}
+.p{
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px
+}
+
+@media screen and (max-width: 728px) {
+    .transportation{
+        text-align: center;
+
+    }
+}

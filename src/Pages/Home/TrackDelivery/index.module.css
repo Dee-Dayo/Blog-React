@@ -1,0 +1,51 @@
+.trackDelivery{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.trackDelivery label{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.trackDelivery input::placeholder{
+    color: #5cb30b;
+}
+.trackDelivery input{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+}
+.track{
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 0
+}
+.btn{
+   color: white;
+    cursor: pointer;
+    background: #316fc3;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 18px
+}
+.size{
+    margin: 20px 20%;
+}
+.p{
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+@media only screen and (max-width: 728px){
+    .size{
+        text-align: center;
+    }
+}

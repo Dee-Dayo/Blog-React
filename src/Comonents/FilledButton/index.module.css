@@ -1,0 +1,18 @@
+.btn{
+    display: flex;
+    gap: 15px;
+}
+.signupBtn{
+    padding: 15px;
+    border-radius: 8px;
+    background: #5cb30b;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signupBtn a{
+    text-decoration: none;
+    color: #fff;
+}

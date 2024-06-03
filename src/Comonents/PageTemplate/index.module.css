@@ -11,9 +11,6 @@
 .container p{
     margin-bottom: 30px;
 }
-/*.container img{*/
-/*    height: 680px;*/
-/*}*/
 .image{
     width: 50%;
 }
@@ -78,4 +75,43 @@
 }
 .remember img{
     width: 5px;
+}
+
+@media screen and (max-width: 728px) {
+    .container{
+        flex-direction: column;
+        background: #f6fbf1;
+    }
+    .heroText{
+        width: 80%;
+    }
+    .image{
+    width: 80%;
+    }
+    .holder{
+    width: 80%;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: medium;
+    border: 1px solid grey;
+    }
+    .loginAboveButton{
+    display: flex;
+    justify-content: center;
+        gap:30px;
+    }
+    .aboveButton{
+    display: flex;
+    justify-content: space-evenly;
+    color: #1a2e35;
+        gap: 50px;
+    }
+    .aboveButton a{
+        text-decoration: none;
+        color: #1a2e35;
+    }
+    .toggleButton{
+        display: none;
+    }
 }

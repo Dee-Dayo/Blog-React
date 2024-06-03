@@ -1,6 +1,7 @@
 .nav{
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     padding: 0 45px;
 }
 .image{
@@ -13,6 +14,14 @@
     font-weight: 500;
     justify-content: center;
     align-items: center;
+}
+.midSection p{
+    cursor: pointer;
+    font-size: larger;
+    color: #4d4d4d;
+}
+.midSection > p:hover{
+    color: #5cb30b;
 }
 .btn{
     display: flex;
@@ -31,17 +40,23 @@
     color: #5cb30b;
     text-decoration: none;
 }
-.signupBtn{
-    padding: 15px;
-    border-radius: 8px;
-    background: #5cb30b;
-    color: #fff;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
 .signupBtn a{
     text-decoration: none;
     color: #fff;
+}
+
+@media only screen and (max-width: 728px) {
+    .midSection{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+    .nav{
+        justify-content: right;
+    }
+    .nav{
+        background: #f6fbf1;
+        padding: 5px;
+    }
 }

@@ -1,0 +1,44 @@
+.footer{
+    background: #263238;
+    padding: 2% 0;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    gap: 20%;
+}
+.footerSider{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-evenly;
+}
+.footerSider h4{
+    color: #5cb30b;
+}
+.input{
+    width: 88%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    border: none;
+    background: #5cb30b;
+    color: whitesmoke;
+}
+.footer input::placeholder{
+    color: whitesmoke;
+}
+.image{
+    position: relative;
+    left: 165px;
+    top: -27px;
+}
+
+@media only screen and (max-width: 728px){
+    .footerSider{
+        display: none;
+    }
+    .footer img{
+        display: none;
+    }
+    .footer {
+            text-align: center;
+    }
+}

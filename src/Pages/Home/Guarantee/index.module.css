@@ -1,0 +1,32 @@
+.section{
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+}
+.p{
+    font-weight: bolder;
+    font-size: 20px;
+    margin: 10px;
+    color: #4d4d4d;
+}
+.div{
+    padding-top: 100px
+}
+
+
+@media only screen and (max-width: 728px) {
+    .section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .div{
+        padding-top: 40px;
+
+    }
+    .image{
+        width: 100%;
+    }
+}

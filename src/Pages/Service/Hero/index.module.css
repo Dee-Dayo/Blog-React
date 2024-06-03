@@ -1,0 +1,44 @@
+.heroSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3% 10%;
+    gap: 40px;
+}
+.heroSection> div > h1{
+    color: #4d4d4d;
+    font-weight: bolder;
+    font-size: 45px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 15px 15px 0px;
+}
+.signupBtn{
+    padding: 15px;
+    border-radius: 8px;
+    background: #5cb30b;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.signupBtn a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@media only screen and (max-width: 728px) {
+    .heroSection{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .heroSection img {
+        width: 200%;
+    }
+}

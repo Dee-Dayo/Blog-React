@@ -1,10 +1,10 @@
-import image from "../../../src/assets/signup.png"
-import PageTemplate from "../../Comonents/PageTemplate";
+import image from "../../../assets/signup.png"
+import PageTemplate from "../../../Comonents/PageTemplate";
 import React, {useState} from "react";
 import * as Yup from "yup";
 import  axios from "axios";
 import {toast, ToastContainer} from "react-toastify";
-import style from "../../Comonents/PageTemplate/index.module.css";
+import style from "../../../Comonents/PageTemplate/index.module.css";
 import {Field, Form, Formik} from "formik";
 import {Icon} from "@iconify/react";
 import loadingLoop from "@iconify/icons-line-md/loading-loop";

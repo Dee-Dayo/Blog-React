@@ -5,10 +5,10 @@ import { Field, Form, Formik } from 'formik';
 import { Icon } from '@iconify/react';
 import loadingLoop from '@iconify/icons-line-md/loading-loop';
 import 'react-toastify/dist/ReactToastify.css';
-import PageTemplate from '../../Comonents/PageTemplate';
-import image from '../../../src/assets/login.png';
-import style from '../../Comonents/PageTemplate/index.module.css';
-import forgot from '../../../src/assets/forget.png'
+import PageTemplate from '../../../Comonents/PageTemplate';
+import image from '../../../assets/login.png';
+import style from '../../../Comonents/PageTemplate/index.module.css';
+import forgot from '../../../assets/forget.png'
 import React, {useState} from "react";
 
 const Login = () => {

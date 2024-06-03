@@ -1,0 +1,12 @@
+.section2{
+    display: flex;
+    flex-direction: row;
+    margin: 40px 15%;
+    gap: 30px;
+}
+
+@media screen and (max-width: 728px) {
+    .section2{
+        flex-direction: column;
+    }
+}
